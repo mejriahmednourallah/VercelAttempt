@@ -1,0 +1,158 @@
+body {
+    background-color: #fff1b8;
+    color: rgb(0, 0, 0);
+}
+
+/* Carousel Container */
+#carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Carousel */
+#carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Mentor Card */
+.mentor-card {
+    width: 100%;
+    max-width: 220px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+    border: 2px solid transparent;
+    transform: scale(0.8);
+}
+
+.mentor-card.active {
+    transform: scale(1.0);
+    background-color: #facc15;
+    padding: 20px;
+    border: 2px solid white;
+    color: black;
+    max-width: 250px;
+}
+
+.mentor-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.mentor-card.active img {
+    width: 100px;
+    height: 100px;
+}
+
+.mentor-card button {
+    background-color: #facc15;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0.375rem;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mentor-card.active button {
+    background-color: white;
+}
+
+.mentor-card button:hover {
+    background-color: #eab308;
+}
+
+/* Carousel Navigation */
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.375rem;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Success Story Section */
+.success-story {
+    display: none;
+}
+
+.success-story.active {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px;
+}
+
+.video-container {
+    width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.story-content {
+    width: 50%;
+}
+
+.story-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.story-content p {
+    font-size: 1rem;
+    color: #68644a;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .success-story.active {
+        flex-direction: column; /* Stack video and content vertically */
+    }
+
+    .video-container {
+        width: 100%; /* Full width for video */
+        margin-bottom: 20px; /* Add space between video and content */
+    }
+
+    .story-content {
+        width: 100%; /* Full width for content */
+    }
+}
+
+/* Navigation dots */
+.story-navigation button.active {
+    background-color: #facc15 !important;
+}
