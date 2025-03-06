@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react" // Removed Heart and Bookmark since we’ll use custom icons
-import { Sidebar } from "../components/Sidebar"
 
 type Trade = {
   id: number
