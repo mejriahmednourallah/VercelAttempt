@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react" // Removed Heart and Bookmark since we’ll use custom icons
 import { Sidebar } from "../components/Sidebar"
-
+import article from "/src/assets/images/article.png";
 type Trade = {
   id: number
   image: string
@@ -15,19 +15,19 @@ export default function OpenTrades() {
   const trades: Trade[] = [
     { 
       id: 1, 
-      image: "/src/assets/images/article.png", // Replace with actual image paths
+      image: article , // Replace with actual image paths
       name: "Crochet",
       description: "Unique handmade crochet items by Artisan Jean Doe" 
     },
     { 
       id: 2, 
-      image: "/src/assets/images/article2.png",
+      image: article,
       name: "Choker",
       description: "Elegant handmade choker by Artisan Marie Smith" 
     },
     { 
       id: 3, 
-      image: "/src/assets/images/article.png",
+      image: article,
       name: "Pottery",
       description: "Hand-crafted ceramic pieces by Artisan John Miller" 
     },
