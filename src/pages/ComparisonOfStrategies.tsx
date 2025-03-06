@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
-import { Sidebar } from "../components/Sidebar"
 
 export default function ComparisonOfStrategies() {
   const [selectedStrategyLeft, setSelectedStrategyLeft] = useState<string>("") // State for the left dropdown
