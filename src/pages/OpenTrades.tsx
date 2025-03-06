@@ -94,7 +94,7 @@ export default function OpenTrades() {
 
                 {/* Trades Container */}
                 <div className="flex items-center justify-center w-full relative">
-                  {getCarouselCards().map(({ card, position }, index) => (
+                  {getCarouselCards().map(({ card, position }, ) => (
                     <div
                       key={card.id}
                       className={`
